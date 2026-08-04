@@ -17,7 +17,7 @@ export function renderContact() {
             <div style="display:flex; flex-direction:column; gap:1.25rem;" class="mono">
               <div style="display:flex; align-items:center; gap:0.75rem;">
                 <span class="badge badge-cyan" style="min-width:70px; justify-content:center;">Email</span>
-                <a href="mailto:adijaya@example.com" style="color:var(--text-primary); text-decoration:none; transition:color var(--transition-fast);" onmouseover="this.style.color='var(--accent-cyan)'" onmouseout="this.style.color='var(--text-primary)'">adijaya@example.com</a>
+                <a href="mailto:adijaya.adiwijaya@gmail.com" style="color:var(--text-primary); text-decoration:none; transition:color var(--transition-fast);" onmouseover="this.style.color='var(--accent-cyan)'" onmouseout="this.style.color='var(--text-primary)'">adijaya.adiwijaya@gmail.com</a>
               </div>
               <div style="display:flex; align-items:center; gap:0.75rem;">
                 <span class="badge badge-cyan" style="min-width:70px; justify-content:center;">GitHub</span>
@@ -123,7 +123,7 @@ export function renderContact() {
   if (footerEl) {
     footerEl.innerHTML = `
       <div class="container" style="padding:2rem 0; text-align:center; color:var(--text-muted); font-size:0.875rem;">
-        <p>© 2026 Adi Jaya. Built with Vanilla HTML/CSS/JS — Hosted on GitHub Pages.</p>
+        <p>© 2026 Muhammad Adi Wijaya. Built with Vanilla HTML/CSS/JS — Hosted on GitHub Pages.</p>
       </div>
     `;
   }

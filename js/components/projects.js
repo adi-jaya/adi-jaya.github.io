@@ -40,21 +40,24 @@ function renderGrid(category) {
     ? projectsData 
     : projectsData.filter(p => p.category === category);
 
-  gridEl.innerHTML = filtered.map(p => `
-    <div class="card fade-in" style="display:flex; flex-direction:column; justify-content:space-between;">
-      <div>
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-          <span class="badge badge-cyan">${p.category.toUpperCase()}</span>
+  gridEl.innerHTML = filtered.map(project => `
+    <div class="card fade-in" style="display:flex; flex-direction:column; justify-content:space-between; padding:0; overflow:hidden;">
+      ${project.image ? `<div style="overflow:hidden; border-bottom:1px solid var(--border-color); aspect-ratio:16/9;"><img src="${project.image}" alt="${project.title}" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.3s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"></div>` : ''}
+      <div style="padding:1.75rem; display:flex; flex-direction:column; justify-content:space-between; flex-grow:1;">
+        <div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <span class="badge badge-cyan">${project.category.toUpperCase()}</span>
+          </div>
+          <h3 style="font-size:1.35rem; margin-bottom:0.75rem;">${project.title}</h3>
+          <p style="color:var(--text-secondary); font-size:0.95rem; margin-bottom:1.5rem;">${project.summary}</p>
+          <div style="display:flex; gap:0.4rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+            ${project.techStack.map(t => `<span class="badge" style="font-size:0.75rem;">${t}</span>`).join('')}
+          </div>
         </div>
-        <h3 style="font-size:1.35rem; margin-bottom:0.75rem;">${p.title}</h3>
-        <p style="color:var(--text-secondary); font-size:0.95rem; margin-bottom:1.5rem;">${p.summary}</p>
-        <div style="display:flex; gap:0.4rem; flex-wrap:wrap; margin-bottom:1.5rem;">
-          ${p.techStack.map(t => `<span class="badge" style="font-size:0.75rem;">${t}</span>`).join('')}
-        </div>
+        <button class="btn btn-outline view-arch-btn" data-id="${project.id}" style="width:100%; justify-content:center; font-size:0.875rem;">
+          View Architecture & Details
+        </button>
       </div>
-      <button class="btn btn-outline view-arch-btn" data-id="${p.id}" style="width:100%; justify-content:center; font-size:0.875rem;">
-        View Architecture & Details
-      </button>
     </div>
   `).join('');
 

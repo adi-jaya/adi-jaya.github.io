@@ -14,7 +14,7 @@ export function renderHero() {
         </h1>
         
         <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2.25rem; max-width: 680px;">
-          Halo, saya <strong style="color:var(--text-primary)">Adi Jaya</strong>. Berfokus pada perancangan arsitektur backend berkinerja tinggi, manajemen basis data berskala enterprise, dan pembuatan aplikasi web modern yang responsif & presisi.
+          Halo, saya <strong style="color:var(--text-primary)">Muhammad Adi Wijaya</strong>. Berfokus pada perancangan arsitektur backend berkinerja tinggi, sistem ERP enterprise, SIMRS/HMIS, dan pembuatan aplikasi web modern berbasis Laravel, .NET Core, & modern JavaScript.
         </p>
 
         <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 3rem; flex-wrap: wrap;">
@@ -29,10 +29,10 @@ export function renderHero() {
 
         <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap; padding-top:1.5rem; border-top:1px dashed var(--border-color);">
           <span class="mono" style="font-size:0.85rem; color:var(--text-muted);">Core Stack:</span>
-          <span class="badge">Node.js</span>
-          <span class="badge">C# / .NET Core</span>
-          <span class="badge">PostgreSQL</span>
-          <span class="badge">React / ES6+</span>
+          <span class="badge">PHP / Laravel</span>
+          <span class="badge">JavaScript / TypeScript</span>
+          <span class="badge">PostgreSQL & MySQL</span>
+          <span class="badge">RESTful API</span>
           <span class="badge">Docker</span>
         </div>
       </div>
