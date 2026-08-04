@@ -30,9 +30,11 @@
   border-color: var(--border-accent);
 }
 
-.btn-outline:hover {
+.btn-outline:hover,
+.btn-outline.active {
   background-color: var(--bg-surface-hover);
   border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
 }
 
 /* Badges & Tags */
